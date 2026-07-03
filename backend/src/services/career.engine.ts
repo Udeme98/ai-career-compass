@@ -1,15 +1,23 @@
 import { AssessmentInput } from "../validators/assessment.schema";
+import { askGemini } from "../ai/gemini.service";
 import { buildCareerPrompt } from "../prompts/career.prompt";
-import { mockCareerResults } from "../mocks/career-results.mock";
 
 export async function analyzeCareerEngine(assessment: AssessmentInput) {
+  console.log("Assessment received:", assessment);
+
   const prompt = buildCareerPrompt(assessment);
 
   console.log("========== PROMPT ==========");
   console.log(prompt);
   console.log("============================");
 
-  // Gemini will go here later
+  const response = await askGemini(prompt);
 
-  return mockCareerResults;
+  console.log("========== GEMINI ==========");
+  console.log(response);
+  console.log("============================");
+
+  return {
+    message: response,
+  };
 }
