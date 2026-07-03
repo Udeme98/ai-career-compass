@@ -1,6 +1,7 @@
 import { AssessmentInput } from "../validators/assessment.schema";
 import { askGemini } from "../ai/gemini.service";
 import { buildCareerPrompt } from "../prompts/career.prompt";
+import { parseGeminiResponse } from "../ai/gemini.parser";
 
 export async function analyzeCareerEngine(assessment: AssessmentInput) {
   console.log("Assessment received:", assessment);
@@ -17,7 +18,9 @@ export async function analyzeCareerEngine(assessment: AssessmentInput) {
   console.log(response);
   console.log("============================");
 
-  return {
-    message: response,
-  };
+  const parsed = parseGeminiResponse(response);
+
+  console.log(parsed);
+
+  return parsed;
 }
