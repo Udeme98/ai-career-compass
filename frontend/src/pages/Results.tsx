@@ -11,6 +11,8 @@ export default function Results() {
     return <div className="p-8">No results available.</div>;
   }
 
+  console.log(results.marketAnalysis);
+
   return (
     <div className="mx-auto max-w-6xl p-6">
       <h1 className="mb-8 text-4xl font-bold">Your Career Results</h1>

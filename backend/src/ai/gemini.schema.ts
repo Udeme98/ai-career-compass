@@ -2,18 +2,22 @@ import { z } from "zod";
 
 export const GeminiCareerMatchSchema = z.object({
   career: z.string(),
-
   matchScore: z.number().min(0).max(100),
-
   fitReason: z.string(),
-
   pros: z.array(z.string()).min(2).max(5),
-
   cons: z.array(z.string()).min(2).max(5),
+});
+
+export const GeminiMarketAnalysisSchema = z.object({
+  career: z.string(),
+  demandLevel: z.enum(["Very High", "High", "Medium", "Low"]),
+  difficulty: z.enum(["Easy", "Medium", "Hard"]),
+  notes: z.string(),
 });
 
 export const GeminiResponseSchema = z.object({
   topCareerMatches: z.array(GeminiCareerMatchSchema).length(5),
+  marketAnalysis: z.array(GeminiMarketAnalysisSchema).length(5),
 });
 
 export type GeminiResponse = z.infer<typeof GeminiResponseSchema>;
