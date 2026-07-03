@@ -15,9 +15,21 @@ export const GeminiMarketAnalysisSchema = z.object({
   notes: z.string(),
 });
 
+export const GeminiRoadmapPhaseSchema = z.object({
+  title: z.string(),
+  duration: z.string(),
+  topics: z.array(z.string()).min(2),
+});
+
+export const GeminiLearningRoadmapSchema = z.object({
+  career: z.string(),
+  phases: z.array(GeminiRoadmapPhaseSchema).length(3),
+});
+
 export const GeminiResponseSchema = z.object({
   topCareerMatches: z.array(GeminiCareerMatchSchema).length(5),
   marketAnalysis: z.array(GeminiMarketAnalysisSchema).length(5),
+  learningRoadmap: GeminiLearningRoadmapSchema,
 });
 
 export type GeminiResponse = z.infer<typeof GeminiResponseSchema>;
