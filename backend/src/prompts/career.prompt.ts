@@ -77,6 +77,24 @@ The JSON must follow this format:
       ]
     }
   ]
+ },
+ "userProfile": {
+  "summary": "The user enjoys analytical problem solving and prefers structured learning.",
+
+  "strengths": [
+    "Logical thinking",
+    "Self-motivated",
+    "Enjoys continuous learning"
+  ],
+
+  "growthAreas": [
+    "Improve collaboration skills",
+    "Gain more practical project experience"
+  ],
+
+  "learningStyle": "Learns best through mentorship and hands-on practice.",
+
+  "recommendedEnvironment": "A collaborative engineering team with experienced mentors."
 }
 }
 
@@ -121,5 +139,17 @@ Requirements:
   - at least 4 learning topics
 - Topics should progress from beginner to intermediate.
 - Tailor the roadmap to the user's assessment where appropriate.
+
+Generate a realistic user profile.
+
+Requirements:
+
+- Write in a supportive but honest tone.
+- Do not exaggerate.
+- Do not make unsupported assumptions.
+- Base every observation only on the assessment.
+- Strengths should be evidence-based.
+- Growth areas should be constructive.
+- Avoid generic motivational language.
 `;
 }
