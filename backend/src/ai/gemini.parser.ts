@@ -1,7 +1,7 @@
+import { GeminiResponseSchema } from "./gemini.schema";
+
 export function parseGeminiResponse(response: string) {
-  try {
-    return JSON.parse(response);
-  } catch (error) {
-    throw new Error("Gemini returned invalid JSON.");
-  }
+  const parsed = JSON.parse(response);
+
+  return GeminiResponseSchema.parse(parsed);
 }

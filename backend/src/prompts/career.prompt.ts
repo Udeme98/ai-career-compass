@@ -24,17 +24,31 @@ The JSON must follow this format:
     {
       "career": "Frontend Developer",
       "matchScore": 95,
-      "fitReason": "Short explanation"
+      "fitReason": "Short explanation",
+      "pros": [
+        "High demand",
+        "Creative work"
+      ],
+      "cons": [
+        "Competitive market",
+        "Requires continuous learning"
+      ]
     }
   ]
 }
 
 Rules:
 
+Rules:
+
 - Recommend exactly 5 careers.
 - Match scores must be between 0 and 100.
-- Sort from highest to lowest score.
+- Sort careers from highest to lowest score.
+- Include 2–5 realistic pros for each career.
+- Include 2–5 realistic cons for each career.
+- Pros and cons should be concise bullet-style phrases.
 - Do not include markdown.
 - Do not explain outside the JSON.
+- Return ONLY valid JSON.
 `;
 }
