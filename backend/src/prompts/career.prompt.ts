@@ -34,6 +34,14 @@ The JSON must follow this format:
         "Requires continuous learning"
       ]
     }
+  ],
+   "marketAnalysis": [
+    {
+      "career": "Frontend Developer",
+      "demandLevel": "High",
+      "difficulty": "Medium",
+      "notes": "Demand remains strong, but junior competition is increasing."
+    }
   ]
 }
 
@@ -50,5 +58,20 @@ Rules:
 - Do not include markdown.
 - Do not explain outside the JSON.
 - Return ONLY valid JSON.
+
+For every recommended career:
+
+- Include one marketAnalysis entry.
+- The order of marketAnalysis must match topCareerMatches.
+- demandLevel must be one of:
+  - Very High
+  - High
+  - Medium
+  - Low
+
+- difficulty must be one of:
+  - Easy
+  - Medium
+  - Hard
 `;
 }
