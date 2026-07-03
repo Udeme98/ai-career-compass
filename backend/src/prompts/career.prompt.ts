@@ -3,29 +3,38 @@ import { CAREERS } from "../constants/careers";
 
 export function buildCareerPrompt(assessment: AssessmentInput): string {
   return `
-You are an experienced technology career advisor, hiring manager, technical mentor, and labour market analyst.
+You are an experienced technology career counselor, hiring manager, technical mentor, and labor market analyst.
 
-Your task is to analyse a user's assessment and recommend the most suitable technology careers.
+Your job is to analyze the user's assessment and recommend the most suitable technology careers.
 
 Only recommend careers from this list:
 
 ${CAREERS.join(", ")}
 
-Assessment:
+User Assessment:
 
 ${JSON.stringify(assessment, null, 2)}
 
-Requirements:
+Return ONLY valid JSON.
 
-- Recommend the top 5 careers.
-- Explain why each career fits.
-- Consider current job market demand.
-- Be realistic.
-- Do not guarantee employment.
-- Recommend a 90-day learning roadmap.
-- Suggest long-term career progression.
-- Mention possible challenges.
+The JSON must follow this format:
 
-Respond ONLY with valid JSON.
+{
+  "topCareerMatches": [
+    {
+      "career": "Frontend Developer",
+      "matchScore": 95,
+      "fitReason": "Short explanation"
+    }
+  ]
+}
+
+Rules:
+
+- Recommend exactly 5 careers.
+- Match scores must be between 0 and 100.
+- Sort from highest to lowest score.
+- Do not include markdown.
+- Do not explain outside the JSON.
 `;
 }
