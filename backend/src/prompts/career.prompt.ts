@@ -42,7 +42,42 @@ The JSON must follow this format:
       "difficulty": "Medium",
       "notes": "Demand remains strong, but junior competition is increasing."
     }
+  ],
+  "learningRoadmap": {
+  "career": "Frontend Developer",
+  "phases": [
+    {
+      "title": "Foundation",
+      "duration": "Weeks 1–4",
+      "topics": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Git"
+      ]
+    },
+    {
+      "title": "Core Skills",
+      "duration": "Weeks 5–8",
+      "topics": [
+        "React",
+        "TypeScript",
+        "APIs",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "title": "Portfolio & Deployment",
+      "duration": "Weeks 9–12",
+      "topics": [
+        "Projects",
+        "Testing",
+        "Deployment",
+        "Performance Optimization"
+      ]
+    }
   ]
+}
 }
 
 Rules:
@@ -73,5 +108,18 @@ For every recommended career:
   - Easy
   - Medium
   - Hard
+
+Create a personalized 90-day learning roadmap.
+
+Requirements:
+
+- The roadmap must be for the highest-ranked career.
+- Divide it into exactly 3 phases.
+- Each phase must contain:
+  - title
+  - duration
+  - at least 4 learning topics
+- Topics should progress from beginner to intermediate.
+- Tailor the roadmap to the user's assessment where appropriate.
 `;
 }
