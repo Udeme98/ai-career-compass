@@ -6,11 +6,15 @@ export interface CareerResult {
   marketAnalysis: MarketAnalysis[];
   learningRoadmap: LearningRoadmap;
   futureProjection: FutureProjection;
-  warnings: string[];
+  // warnings: string[];
 }
 
 export interface UserProfile {
   summary: string;
+  strengths: string[];
+  growthAreas: string[];
+  learningStyle: string;
+  recommendedEnvironment: string;
 }
 
 export interface CareerMatch {
@@ -23,7 +27,7 @@ export interface CareerMatch {
 
 export interface MarketAnalysis {
   career: Career;
-  demandLevel: "Low" | "Medium" | "High";
+  demandLevel: "Low" | "Medium" | "High" | "Very High";
   difficulty: "Easy" | "Medium" | "Hard";
   notes: string;
 }
@@ -40,7 +44,15 @@ export interface RoadmapPhase {
 }
 
 export interface FutureProjection {
-  oneYear: string;
-  threeYears: string;
-  fiveYears: string;
+  career: string;
+
+  outlook: string;
+
+  salaryPotential: "Low" | "Medium" | "High" | "Very High";
+
+  growthPotential: "Low" | "Medium" | "High" | "Very High";
+
+  nextRoles: string[];
+
+  futureSkills: string[];
 }

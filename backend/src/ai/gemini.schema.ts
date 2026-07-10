@@ -34,11 +34,21 @@ export const GeminiUserProfileSchema = z.object({
   recommendedEnvironment: z.string(),
 });
 
+export const GeminiFutureProjectionSchema = z.object({
+  career: z.string(),
+  outlook: z.string(),
+  salaryPotential: z.enum(["Low", "Medium", "High", "Very High"]),
+  growthPotential: z.enum(["Low", "Medium", "High", "Very High"]),
+  nextRoles: z.array(z.string()).min(3).max(5),
+  futureSkills: z.array(z.string()).min(4).max(8),
+});
+
 export const GeminiResponseSchema = z.object({
   topCareerMatches: z.array(GeminiCareerMatchSchema).length(5),
   marketAnalysis: z.array(GeminiMarketAnalysisSchema).length(5),
   learningRoadmap: GeminiLearningRoadmapSchema,
   userProfile: GeminiUserProfileSchema,
+  futureProjection: GeminiFutureProjectionSchema,
 });
 
 export type GeminiResponse = z.infer<typeof GeminiResponseSchema>;

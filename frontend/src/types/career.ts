@@ -33,9 +33,12 @@ export interface LearningRoadmap {
 }
 
 export interface FutureProjection {
-  oneYear: string;
-  threeYears: string;
-  fiveYears: string;
+  career: string;
+  outlook: string;
+  salaryPotential: "Low" | "Medium" | "High" | "Very High";
+  growthPotential: "Low" | "Medium" | "High" | "Very High";
+  nextRoles: string[];
+  futureSkills: string[];
 }
 
 export interface CareerResult {

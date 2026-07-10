@@ -151,5 +151,15 @@ Requirements:
 - Strengths should be evidence-based.
 - Growth areas should be constructive.
 - Avoid generic motivational language.
+
+Generate a realistic future projection for the highest-ranked career.
+
+Requirements:
+
+- Base projections on current technology trends.
+- Do not guarantee employment or salary.
+- Be optimistic but realistic.
+- Recommend 3–5 possible future roles.
+- Recommend 4–8 skills that will likely become more valuable.
 `;
 }

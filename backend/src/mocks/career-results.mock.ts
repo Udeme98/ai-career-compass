@@ -3,8 +3,18 @@ import { Career } from "../constants/careers";
 
 export const mockCareerResults: CareerResult = {
   userProfile: {
-    summary:
-      "You enjoy building digital products, prefer hands-on learning, and are motivated by creating practical solutions. Your profile suggests a strong fit for software engineering roles with opportunities for continuous learning and collaboration.",
+    summary: "You enjoy building digital products...",
+
+    strengths: ["Logical thinking", "Curious learner", "Self-motivated"],
+
+    growthAreas: [
+      "Gain more real-world project experience",
+      "Improve technical communication",
+    ],
+
+    learningStyle: "Hands-on learning with mentorship.",
+
+    recommendedEnvironment: "Collaborative engineering teams.",
   },
 
   topCareerMatches: [
@@ -112,21 +122,34 @@ export const mockCareerResults: CareerResult = {
   },
 
   futureProjection: {
-    oneYear:
-      "With consistent study and portfolio projects, you could become competitive for junior frontend positions.",
+    career: "Backend Developer",
+    outlook:
+      "Backend engineering is expected to remain highly valuable due to cloud adoption, scalable systems, and AI-driven applications.",
 
-    threeYears:
-      "You could progress into a mid-level software engineering role with experience across modern frontend technologies.",
+    salaryPotential: "High",
 
-    fiveYears:
-      "Potential career paths include Senior Frontend Engineer, Fullstack Engineer, Technical Lead, or Engineering Manager depending on your interests.",
+    growthPotential: "Very High",
+
+    nextRoles: [
+      "Senior Backend Developer",
+      "Solutions Architect",
+      "Engineering Manager",
+    ],
+
+    futureSkills: [
+      "Cloud Computing",
+      "System Design",
+      "Docker",
+      "Kubernetes",
+      "AI Integration",
+    ],
   },
 
-  warnings: [
-    "Do not rely solely on certificates; employers prioritize practical projects.",
+  // warnings: [
+  //   "Do not rely solely on certificates; employers prioritize practical projects.",
 
-    "Expect competition for entry-level positions and continue improving your portfolio.",
+  //   "Expect competition for entry-level positions and continue improving your portfolio.",
 
-    "Continuous learning is essential because web technologies evolve rapidly.",
-  ],
+  //   "Continuous learning is essential because web technologies evolve rapidly.",
+  // ],
 };

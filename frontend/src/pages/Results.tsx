@@ -3,6 +3,7 @@ import CareerCard from "../components/results/CareerCard";
 import RoadmapTimeline from "../components/results/RoadmapTimeline";
 import { useLocation } from "react-router-dom";
 import UserProfileCard from "../components/results/UserProfileCard";
+import FutureProjectionCard from "../components/results/FutureProjectionCard";
 
 export default function Results() {
   const location = useLocation();
@@ -32,6 +33,14 @@ export default function Results() {
         {results.learningRoadmap && (
           <div className="mt-8">
             <RoadmapTimeline roadmap={results.learningRoadmap} />
+          </div>
+        )}
+      </div>
+
+      <div className="mt-8">
+        {results.futureProjection && (
+          <div className="mt-8">
+            <FutureProjectionCard projection={results.futureProjection} />
           </div>
         )}
       </div>
