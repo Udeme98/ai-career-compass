@@ -1,5 +1,9 @@
 export interface UserProfile {
   summary: string;
+  strengths: string[];
+  growthAreas: string[];
+  learningStyle: string;
+  recommendedEnvironment: string;
 }
 
 export interface CareerMatch {
@@ -29,9 +33,18 @@ export interface LearningRoadmap {
 }
 
 export interface FutureProjection {
-  oneYear: string;
-  threeYears: string;
-  fiveYears: string;
+  career: string;
+  outlook: string;
+  salaryPotential: "Low" | "Medium" | "High" | "Very High";
+  growthPotential: "Low" | "Medium" | "High" | "Very High";
+  nextRoles: string[];
+  futureSkills: string[];
+}
+
+export interface Warning {
+  title: string;
+  description: string;
+  severity: "Low" | "Medium" | "High";
 }
 
 export interface CareerResult {
@@ -45,5 +58,5 @@ export interface CareerResult {
 
   futureProjection: FutureProjection;
 
-  warnings: string[];
+  warnings: Warning[];
 }

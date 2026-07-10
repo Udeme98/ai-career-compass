@@ -4,6 +4,18 @@ export const mockResults: CareerResult = {
   userProfile: {
     summary:
       "You enjoy solving problems, building software, and learning modern technologies.",
+    strengths: [
+      "Problem solving",
+      "Creative thinking",
+      "Interest in modern web technologies",
+    ],
+    growthAreas: [
+      "Building a consistent project portfolio",
+      "Deepening TypeScript and testing skills",
+    ],
+    learningStyle: "Hands-on learning through guided projects and iteration.",
+    recommendedEnvironment:
+      "Collaborative teams where you can build visible products and receive regular feedback.",
   },
   topCareerMatches: [
     {
@@ -57,18 +69,42 @@ export const mockResults: CareerResult = {
     ],
   },
   futureProjection: {
-    oneYear:
-      "You could be ready for junior developer opportunities with consistent learning and projects.",
-
-    threeYears:
-      "You could be working independently on production applications.",
-
-    fiveYears:
-      "You may progress into senior engineering or technical leadership roles.",
+    career: "Backend Developer",
+    outlook:
+      "Backend engineering is expected to remain highly valuable due to cloud adoption, scalable systems, and AI-driven applications.",
+    salaryPotential: "High",
+    growthPotential: "Very High",
+    nextRoles: [
+      "Senior Backend Developer",
+      "Solutions Architect",
+      "Engineering Manager",
+    ],
+    futureSkills: [
+      "Cloud Computing",
+      "Docker",
+      "Kubernetes",
+      "AI Integration",
+      "System Design",
+    ],
   },
 
   warnings: [
-    "Frontend development remains competitive.",
-    "Consistent portfolio building is essential.",
+    {
+      title: "Competitive Entry",
+      description:
+        "Junior positions are highly competitive. A strong portfolio is essential.",
+      severity: "High",
+    },
+    {
+      title: "Continuous Learning",
+      description: "Technology evolves quickly. Learning never really stops.",
+      severity: "Medium",
+    },
+    {
+      title: "Communication Skills",
+      description:
+        "Communication becomes increasingly important for senior engineers.",
+      severity: "Low",
+    },
   ],
 };
