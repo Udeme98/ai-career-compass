@@ -43,12 +43,19 @@ export const GeminiFutureProjectionSchema = z.object({
   futureSkills: z.array(z.string()).min(4).max(8),
 });
 
+export const GeminiWarningSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  severity: z.enum(["Low", "Medium", "High"]),
+});
+
 export const GeminiResponseSchema = z.object({
   topCareerMatches: z.array(GeminiCareerMatchSchema).length(5),
   marketAnalysis: z.array(GeminiMarketAnalysisSchema).length(5),
   learningRoadmap: GeminiLearningRoadmapSchema,
   userProfile: GeminiUserProfileSchema,
   futureProjection: GeminiFutureProjectionSchema,
+  warnings: z.array(GeminiWarningSchema).min(3).max(5),
 });
 
 export type GeminiResponse = z.infer<typeof GeminiResponseSchema>;

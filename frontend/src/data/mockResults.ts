@@ -89,7 +89,22 @@ export const mockResults: CareerResult = {
   },
 
   warnings: [
-    "Frontend development remains competitive.",
-    "Consistent portfolio building is essential.",
+    {
+      title: "Competitive Entry",
+      description:
+        "Junior positions are highly competitive. A strong portfolio is essential.",
+      severity: "High",
+    },
+    {
+      title: "Continuous Learning",
+      description: "Technology evolves quickly. Learning never really stops.",
+      severity: "Medium",
+    },
+    {
+      title: "Communication Skills",
+      description:
+        "Communication becomes increasingly important for senior engineers.",
+      severity: "Low",
+    },
   ],
 };

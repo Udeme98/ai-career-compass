@@ -145,11 +145,23 @@ export const mockCareerResults: CareerResult = {
     ],
   },
 
-  // warnings: [
-  //   "Do not rely solely on certificates; employers prioritize practical projects.",
-
-  //   "Expect competition for entry-level positions and continue improving your portfolio.",
-
-  //   "Continuous learning is essential because web technologies evolve rapidly.",
-  // ],
+  warnings: [
+    {
+      title: "Competitive Entry",
+      description:
+        "Junior positions are competitive. A strong portfolio is essential.",
+      severity: "High",
+    },
+    {
+      title: "Continuous Learning",
+      description:
+        "Technology changes rapidly, so regular learning is required.",
+      severity: "Medium",
+    },
+    {
+      title: "Communication Skills",
+      description: "Soft skills become increasingly important as you progress.",
+      severity: "Low",
+    },
+  ],
 };
