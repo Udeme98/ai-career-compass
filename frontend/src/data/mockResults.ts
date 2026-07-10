@@ -69,14 +69,23 @@ export const mockResults: CareerResult = {
     ],
   },
   futureProjection: {
-    oneYear:
-      "You could be ready for junior developer opportunities with consistent learning and projects.",
-
-    threeYears:
-      "You could be working independently on production applications.",
-
-    fiveYears:
-      "You may progress into senior engineering or technical leadership roles.",
+    career: "Backend Developer",
+    outlook:
+      "Backend engineering is expected to remain highly valuable due to cloud adoption, scalable systems, and AI-driven applications.",
+    salaryPotential: "High",
+    growthPotential: "Very High",
+    nextRoles: [
+      "Senior Backend Developer",
+      "Solutions Architect",
+      "Engineering Manager",
+    ],
+    futureSkills: [
+      "Cloud Computing",
+      "Docker",
+      "Kubernetes",
+      "AI Integration",
+      "System Design",
+    ],
   },
 
   warnings: [
