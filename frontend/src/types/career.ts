@@ -1,5 +1,9 @@
 export interface UserProfile {
   summary: string;
+  strengths: string[];
+  growthAreas: string[];
+  learningStyle: string;
+  recommendedEnvironment: string;
 }
 
 export interface CareerMatch {

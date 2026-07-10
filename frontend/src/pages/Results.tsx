@@ -2,6 +2,7 @@
 import CareerCard from "../components/results/CareerCard";
 import RoadmapTimeline from "../components/results/RoadmapTimeline";
 import { useLocation } from "react-router-dom";
+import UserProfileCard from "../components/results/UserProfileCard";
 
 export default function Results() {
   const location = useLocation();
@@ -16,10 +17,11 @@ export default function Results() {
   return (
     <div className="mx-auto max-w-6xl p-6">
       <h1 className="mb-8 text-4xl font-bold">Your Career Results</h1>
-      <pre className="mb-8 rounded bg-gray-100 p-4">
+      {/* <pre className="mb-8 rounded bg-gray-100 p-4">
         {JSON.stringify(results, null, 2)}
-      </pre>
+      </pre> */}
 
+      <UserProfileCard profile={results.userProfile} />
       <div className="grid gap-6 md:grid-cols-2">
         {results.topCareerMatches?.map((career: any) => (
           <CareerCard key={career.career} career={career} />

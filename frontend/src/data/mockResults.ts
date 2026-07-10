@@ -4,6 +4,18 @@ export const mockResults: CareerResult = {
   userProfile: {
     summary:
       "You enjoy solving problems, building software, and learning modern technologies.",
+    strengths: [
+      "Problem solving",
+      "Creative thinking",
+      "Interest in modern web technologies",
+    ],
+    growthAreas: [
+      "Building a consistent project portfolio",
+      "Deepening TypeScript and testing skills",
+    ],
+    learningStyle: "Hands-on learning through guided projects and iteration.",
+    recommendedEnvironment:
+      "Collaborative teams where you can build visible products and receive regular feedback.",
   },
   topCareerMatches: [
     {
