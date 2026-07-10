@@ -95,10 +95,42 @@ The JSON must follow this format:
   "learningStyle": "Learns best through mentorship and hands-on practice.",
 
   "recommendedEnvironment": "A collaborative engineering team with experienced mentors."
+},
+"futureProjection": {
+  "career": "Frontend Developer",
+  "outlook": "Frontend development is likely to remain relevant as web products become more interactive, accessible, and AI-assisted. Strong candidates will combine UI engineering with performance, accessibility, testing, and product collaboration skills.",
+  "salaryPotential": "High",
+  "growthPotential": "High",
+  "nextRoles": [
+    "Senior Frontend Engineer",
+    "Design Systems Engineer",
+    "Web Performance Specialist"
+  ],
+  "futureSkills": [
+    "TypeScript",
+    "Modern frontend frameworks",
+    "Web accessibility",
+    "Performance optimization"
+  ]
+},
+"warnings": [
+  {
+    "title": "Entry-Level Competition",
+    "description": "Junior roles can be competitive, so practical portfolio work and consistent project completion will matter.",
+    "severity": "Medium"
+  },
+  {
+    "title": "Hands-On Practice",
+    "description": "Tutorials are useful, but independent coding practice is needed to build confidence and problem-solving skill.",
+    "severity": "Medium"
+  },
+  {
+    "title": "Communication Matters",
+    "description": "Clear communication and collaboration will help the user work effectively with designers, developers, and stakeholders.",
+    "severity": "Low"
+  }
+]
 }
-}
-
-Rules:
 
 Rules:
 
@@ -156,10 +188,44 @@ Generate a realistic future projection for the highest-ranked career.
 
 Requirements:
 
+- Use exactly this object name: futureProjection.
+- futureProjection must include exactly these fields:
+  - career
+  - outlook
+  - salaryPotential
+  - growthPotential
+  - nextRoles
+  - futureSkills
+- career must match the highest-ranked career.
+- salaryPotential must be one of:
+  - Low
+  - Medium
+  - High
+  - Very High
+- growthPotential must be one of:
+  - Low
+  - Medium
+  - High
+  - Very High
+- Do not use alternate field names such as futureRoles, valuableSkills, possibleFutureRoles, or increasinglyValuableSkills.
 - Base projections on current technology trends.
-- Do not guarantee employment or salary.
+- Do not guarantee employment or specific salary.
 - Be optimistic but realistic.
-- Recommend 3–5 possible future roles.
-- Recommend 4–8 skills that will likely become more valuable.
+- nextRoles must contain 3-5 possible future roles.
+- futureSkills must contain 4-8 skills that will likely become more valuable.
+
+Generate 3–5 realistic warnings.
+
+Requirements:
+
+- Use exactly this array name: warnings.
+- Do not scare the user.
+- Be constructive.
+- Focus on career preparation.
+- Mix technical and non-technical advice.
+- Each warning should have:
+  - title
+  - description
+  - severity
 `;
 }

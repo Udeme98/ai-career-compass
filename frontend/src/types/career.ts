@@ -41,6 +41,12 @@ export interface FutureProjection {
   futureSkills: string[];
 }
 
+export interface Warning {
+  title: string;
+  description: string;
+  severity: "Low" | "Medium" | "High";
+}
+
 export interface CareerResult {
   userProfile: UserProfile;
 
@@ -52,5 +58,5 @@ export interface CareerResult {
 
   futureProjection: FutureProjection;
 
-  warnings: string[];
+  warnings: Warning[];
 }

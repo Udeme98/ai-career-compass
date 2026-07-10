@@ -4,6 +4,7 @@ import RoadmapTimeline from "../components/results/RoadmapTimeline";
 import { useLocation } from "react-router-dom";
 import UserProfileCard from "../components/results/UserProfileCard";
 import FutureProjectionCard from "../components/results/FutureProjectionCard";
+import WarningsCard from "../components/results/WarningsCard";
 
 export default function Results() {
   const location = useLocation();
@@ -43,6 +44,10 @@ export default function Results() {
             <FutureProjectionCard projection={results.futureProjection} />
           </div>
         )}
+      </div>
+
+      <div className="mt-8">
+        {results.warnings && <WarningsCard warnings={results.warnings} />}
       </div>
     </div>
   );

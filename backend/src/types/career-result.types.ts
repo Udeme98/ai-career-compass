@@ -6,7 +6,7 @@ export interface CareerResult {
   marketAnalysis: MarketAnalysis[];
   learningRoadmap: LearningRoadmap;
   futureProjection: FutureProjection;
-  // warnings: string[];
+  warnings: Warning[];
 }
 
 export interface UserProfile {
@@ -45,14 +45,15 @@ export interface RoadmapPhase {
 
 export interface FutureProjection {
   career: string;
-
   outlook: string;
-
   salaryPotential: "Low" | "Medium" | "High" | "Very High";
-
   growthPotential: "Low" | "Medium" | "High" | "Very High";
-
   nextRoles: string[];
-
   futureSkills: string[];
+}
+
+export interface Warning {
+  title: string;
+  description: string;
+  severity: "Low" | "Medium" | "High";
 }
