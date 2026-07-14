@@ -10,14 +10,28 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigins = process.env.CORS_ORIGINS?.split(",")
-  .map((origin) => origin.trim())
-  .filter(Boolean) ?? ["http://localhost:5173", "http://localhost:5174"];
+const defaultOrigins = ["http://localhost:5173", "http://localhost:5174"];
+
+function normalizeOrigin(value: string) {
+  const trimmed = value.trim();
+  const urlMatch = trimmed.match(/https?:\/\/[^\s,\])]+/i);
+  const origin = urlMatch?.[0] ?? trimmed;
+
+  try {
+    return new URL(origin).origin;
+  } catch {
+    return origin.replace(/\/+$/, "");
+  }
+}
+
+const allowedOrigins = (process.env.CORS_ORIGINS?.split(",") ?? defaultOrigins)
+  .map(normalizeOrigin)
+  .filter(Boolean);
 
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin || allowedOrigins.includes(normalizeOrigin(origin))) {
         callback(null, true);
         return;
       }
