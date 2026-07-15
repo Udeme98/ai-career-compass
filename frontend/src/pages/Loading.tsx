@@ -68,7 +68,7 @@ export default function Loading() {
   };
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center bg-[#030408] px-6 text-zinc-300 overflow-hidden font-roboto selection:bg-teal-500/20 selection:text-teal-200">
+    <div className="relative flex min-h-screen flex-col items-center justify-center bg-[#030408] px-6 text-zinc-300 overflow-hidden font-roboto selection:bg-teal-500/20 selection:text-teal-200 pt-12 md:pt-0">
       <div className="absolute top-[-15%] left-[-15%] w-[65%] h-[60%] rounded-full bg-teal-950/15 blur-[160px] pointer-events-none"></div>
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[55%] rounded-full bg-cyan-950/15 blur-[160px] pointer-events-none"></div>
 

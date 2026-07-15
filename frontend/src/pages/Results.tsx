@@ -31,7 +31,7 @@ export default function Results() {
       <div className="absolute top-[-15%] left-[-15%] w-[65%] h-[60%] rounded-full bg-teal-950/15 blur-[160px] pointer-events-none"></div>
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[55%] rounded-full bg-cyan-950/15 blur-[160px] pointer-events-none"></div>
 
-      <main className="relative z-10 mx-auto max-w-6xl px-6 py-10 md:py-14">
+      <main className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-10 md:py-14">
         <div className="mb-6 flex justify-center md:justify-start">
           <Link
             to="/"
