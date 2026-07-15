@@ -51,10 +51,18 @@ export default function Results() {
         <div className="space-y-8">
           <UserProfileCard profile={results.userProfile} />
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {results.topCareerMatches?.map((career: any) => (
-              <CareerCard key={career.career} career={career} />
-            ))}
+          <div>
+            <h2 className="mb-4 font-inter text-2xl font-bold tracking-tight text-white">
+              Top Career{" "}
+              <span className="bg-gradient-to-r from-teal-200 via-cyan-400 to-teal-300 bg-clip-text text-transparent">
+                Matches
+              </span>
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              {results.topCareerMatches?.map((career: any) => (
+                <CareerCard key={career.career} career={career} />
+              ))}
+            </div>
           </div>
 
           {results.learningRoadmap && (
