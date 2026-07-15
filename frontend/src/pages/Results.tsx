@@ -32,6 +32,15 @@ export default function Results() {
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[55%] rounded-full bg-cyan-950/15 blur-[160px] pointer-events-none"></div>
 
       <main className="relative z-10 mx-auto max-w-6xl px-6 py-10 md:py-14">
+        <div className="mb-6 flex justify-center md:justify-start">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-xl border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-200 transition-all hover:border-teal-300/60 hover:bg-teal-500/20"
+          >
+            ← Back to Home
+          </Link>
+        </div>
+
         <h1 className="mb-10 text-center font-inter text-3xl font-bold tracking-tight text-white md:text-4xl">
           Your Career{" "}
           <span className="bg-gradient-to-r from-teal-200 via-cyan-400 to-teal-300 bg-clip-text text-transparent">
