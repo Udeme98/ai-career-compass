@@ -9,7 +9,7 @@ export default function StartScreen({ onStart }: StartScreenProps) {
     <div className="relative min-h-screen bg-[#030408] text-zinc-300 overflow-x-hidden font-roboto selection:bg-teal-500/20 selection:text-teal-200 flex flex-col">
       <div className="absolute top-[-15%] left-[-15%] w-[65%] h-[60%] rounded-full bg-teal-950/15 blur-[160px] pointer-events-none"></div>
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[55%] rounded-full bg-cyan-950/15 blur-[160px] pointer-events-none"></div>
-      <main className="relative z-10 max-w-5xl w-full mx-auto px-6 flex flex-col justify-center items-center flex-1">
+      <main className="relative z-10 max-w-5xl w-full mx-auto px-6 flex flex-col justify-center items-center flex-1 pt-12 md:pt-0">
         <div className="w-full flex flex-col items-center">
           {/* Main Title Header (Subdued dark text with soft transitions) */}
           <div className="max-w-4xl text-center space-y-6 mb-16">

@@ -44,7 +44,7 @@ export default function Assessment() {
       <div className="absolute top-[-15%] left-[-15%] w-[65%] h-[60%] rounded-full bg-teal-950/15 blur-[160px] pointer-events-none"></div>
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[55%] rounded-full bg-cyan-950/15 blur-[160px] pointer-events-none"></div>
 
-      <main className="relative z-10 mx-auto w-full max-w-3xl flex-1 px-6 py-10 md:py-14">
+      <main className="relative z-10 mx-auto w-full max-w-3xl flex-1 px-6 pt-16 pb-10 md:py-14">
         <h1 className="mb-10 text-center font-inter text-3xl font-bold tracking-tight text-white md:text-4xl">
           AI Career{" "}
           <span className="bg-gradient-to-r from-teal-200 via-cyan-400 to-teal-300 bg-clip-text text-transparent">
